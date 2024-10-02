@@ -1,117 +1,106 @@
-/* aca tiene que ir todo tu css de toda tu web */
 .margin-section {
-    margin-top: 2rem ;
-    margin-bottom: 2rem ;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
-/*Estilos generales del boton whatsapp*/
 .whatsapp-btn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 9999;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background-color: #25D366;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    animation: breathe 2s ease-in-out infinite;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #25D366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  animation: breathe 2s ease-in-out infinite;
+}
+.whatsapp-btn i {
+  color: #fff;
+  font-size: 24px;
+  animation: beat 2s ease-in-out infinite;
+  text-decoration: none;
+}
+
+@keyframes breathe {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
   }
-  
-  /*Estilos solo al icono whatsapp*/
-  .whatsapp-btn i {
-    color: #fff;
-    font-size: 24px;
-    animation: beat 2s ease-in-out infinite;
-    text-decoration: none;
+  70% {
+    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
   }
-  
-  /*Estilos con animation contorno respirando*/
-  @keyframes breathe {
-    0% {
-      box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
-    }
-    70% {
-      box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
-    }
-    100% {
-      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-    }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
   }
-  
-  /*Estilos de animacion del icono latiendo*/
-  @keyframes beat {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.2);
-    }
-    100% {
-      transform: scale(1);
-    }
+}
+@keyframes beat {
+  0% {
+    transform: scale(1);
   }
-  @media (max-width: 768px) {
-      .carousel-item {
-          height: 30vh;
-      }
-      .carousel-caption h1 {
-          font-size: 1.5rem;
-      }
-      .carousel-caption p {
-          font-size: 1rem;
-      }
-      .carousel-caption {
-          bottom: 10%;
-          padding: 10px;
-          text-align: center;
-      }
-      .carousel-caption {
-          position: absolute;
-          bottom: 25%;
-          z-index: 10;
-          color: white;
-          text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
-      }
-      .carousel-indicators {
-        position: absolute;
-        bottom: 20%;
-        z-index: 15;
-      }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@media (max-width: 768px) {
+  .carousel-item {
+    height: 30vh;
   }
   .carousel-caption {
-      position: absolute;
-      bottom: 20%;
-      z-index: 10;
-      color: white;
-      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    text-align: center;
+    position: absolute;
+    bottom: 25%;
+    z-index: 10;
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
   }
-  .carousel-item img {
-      width: 100%;
-      height: auto;
+  .carousel-caption h1 {
+    font-size: 1.5rem;
+  }
+  .carousel-caption p {
+    font-size: 1rem;
   }
   .carousel-indicators {
     position: absolute;
-    bottom: 10%;
+    bottom: 20%;
     z-index: 15;
   }
-  .carousel-indicators button {
-    width: 10px;
-    height: 10px;
-    background-color: #fff; /* Color visible */
-    border-radius: 50%;
-    border: none;
-    opacity: 0.7;
-  }
-  .carousel-indicators button.active {
-    opacity: 1;
-    background-color: #007bff; /* Un color diferente para el indicador activo */
-  }
-  .carousel-item img {
-    object-fit: cover; /* Esto asegurará que la imagen se ajuste al tamaño del contenedor */
-    height: 100%;
-    width: 100%;
-  }
+}
+.carousel-caption {
+  position: absolute;
+  bottom: 20%;
+  z-index: 10;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 10%;
+  z-index: 15;
+}
+.carousel-indicators button {
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: none;
+  opacity: 0.7;
+}
+.carousel-indicators button.active {
+  opacity: 1;
+  background-color: #007bff;
+}
+
+.carousel-item img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  width: 100%;
+}/*# sourceMappingURL=estilos.css.map */
