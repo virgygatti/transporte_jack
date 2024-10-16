@@ -103,6 +103,14 @@ $carousel-caption-padding: 10px;
     z-index: 15;
   }
 }
+.ratio-10x3 {
+  --bs-aspect-ratio: 30%
+}
+@media (max-width: 1000px) {
+  .ratio-10x3 {
+    --bs-aspect-ratio: 40%
+  }
+}
 
 // Estilos generales del carousel
 .carousel-caption {
@@ -138,4 +146,67 @@ $carousel-caption-padding: 10px;
   object-fit: cover;
   height: 100%;
   width: 100%;
+}
+.container-logos {
+  overflow: hidden;
+  margin-top: 50px;
+  .slider-logos {
+    animation: slidein 15s linear infinite;
+    white-space: nowrap;
+    .logos {
+      width: 75%;
+      display: inline-block;
+      margin: 10px 10px;
+      .fab {
+        width: calc(100% / 5);
+        animation: fade-in 0.5s 
+          cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
+      }
+    }
+  }
+}
+@keyframes slidein {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+.portfolio .portfolio-item {
+  cursor: pointer;
+  position: relative;
+  display: block;
+  max-width: 25rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.portfolio .portfolio-item .portfolio-item-caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+  background-color: #676767;
+}
+.portfolio .portfolio-item .portfolio-item-caption:hover {
+  opacity: 0.75;
+}
+.portfolio .portfolio-item .portfolio-item-caption .portfolio-item-caption-content {
+  font-size: 1.5rem;
+}
+.portfolio-modal .btn-close {
+  color: #1abc9c;
+  font-size: 2rem;
+  padding: 1rem;
+}
+.portfolio-modal .portfolio-modal-title {
+  font-size: 2.25rem;
+  line-height: 2rem;
+}
+@media (min-width: 992px) {
+  .portfolio-modal .portfolio-modal-title {
+    font-size: 3rem;
+    line-height: 2.5rem;
+  }
 }
